@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de la Mascota</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Datos de la Mascota</h1>
+    <form action="/update_pet_info" method="POST">
+        <div class="pet-info">
+            <h2>Información de la Mascota</h2>
+            <p><strong>Nombre:</strong> <input type="text" name="pet_name" value="{{ pet.name }}"></p>
+            <p><strong>Edad:</strong> <input type="text" name="pet_age" value="{{ pet.age }}"></p>
+            <p><strong>Raza:</strong> <input type="text" name="pet_breed" value="{{ pet.breed }}"></p>
+            <p><strong>Color:</strong> <input type="text" name="pet_color" value="{{ pet.color }}"></p>
+        </div>
+        <div class="owner-info">
+            <h2>Información del Dueño</h2>
+            <p><strong>Nombre:</strong> <input type="text" name="owner_name" value="{{ owner.name }}"></p>
+            <p><strong>Teléfono:</strong> <input type="text" name="owner_phone" value="{{ owner.phone }}"></p>
+            <p><strong>Dirección:</strong> <input type="text" name="owner_address" value="{{ owner.address }}"></p>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+</html>
